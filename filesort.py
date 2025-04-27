@@ -2,9 +2,9 @@ import os
 import shutil
 
 # Set your paths here
-DOCUMENTS_PATH = r'/Users/Yahya/Documents'   # Change to your Documents path
-DEV_PATH = r'/Users/Yahya/dev'               # Change to your dev folder path
-SOURCE_PATH = r'/Users/Yahya/Downloads'      # Folder to watch/move files from
+DOCUMENTS_PATH = r'/Users/username/Documents'   # Change to your Documents path
+DEV_PATH = r'/Users/username/dev'               # Change to your dev folder path
+SOURCE_PATH = r'/Users/username/Downloads'      # Folder to watch/move files from
 
 # File type categories and their extensions
 file_types = {
@@ -16,7 +16,7 @@ file_types = {
 
 def is_screenshot(filename):
     # Adjust this function for your OS/language/filename pattern
-    # Common screenshot patterns: "Screenshot", "スクリーンショット", "屏幕截图", etc.
+    # Common screenshot patterns: "Screenshot", etc.
     return filename.lower().startswith('screenshot') or 'screenshot' in filename.lower()
 
 def organize_folder(source_folder, documents_folder, dev_folder):
