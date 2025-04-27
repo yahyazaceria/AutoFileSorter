@@ -39,7 +39,7 @@ The script scans your source folder (e.g., Downloads), checks each file’s type
 ## Automate (Optional)
 
 To run this script automatically at intervals, use Windows Task Scheduler or a similar tool.  
-If you need help setting this up, see [this guide](https://www.howtogeek.com/123393/how-to-create-scheduled-tasks-with-the-task-scheduler-gui/) or ask for instructions.
+If you need help setting this up on MacOS or Linux, see [this guide]([https://www.howtogeek.com/123393/how-to-create-scheduled-tasks-with-the-task-scheduler-gui/](https://dev.to/brumor/automating-stuff-on-your-computer-with-cron-jobs-with-any-language-1eoc)) or ask for instructions.
 
 ---
 
