@@ -33,26 +33,3 @@ The script scans your source folder (e.g., Downloads), checks each file’s type
 
 3. **Edit Paths**  
    Open `filesort.py` and set the variables at the top to match your system:
-
----
-
-## Automate (Optional)
-
-To run this script automatically at intervals, use Windows Task Scheduler or a similar tool.  
-If you need help setting this up on MacOS or Linux, see [this guide]([https://www.howtogeek.com/123393/how-to-create-scheduled-tasks-with-the-task-scheduler-gui/](https://dev.to/brumor/automating-stuff-on-your-computer-with-cron-jobs-with-any-language-1eoc)) or ask for instructions.
-
----
-
-## Contributing
-
-Feel free to fork this project and submit pull requests for improvements!
-
----
-
-## License
-
-This project is open source and free to use.
-
----
-
-**Enjoy a tidier, more organized computer!**
