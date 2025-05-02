@@ -4,6 +4,7 @@ AutoFileSorter is a simple Python script that automatically organizes your files
 It moves PDFs, images, and screenshots into categorized folders inside your Documents directory, and moves development files into a separate `dev` folder.
 
 ![hippo](https://github.com/yahyazaceria/AutoFileSorter/blob/main/AutoFileSorter_Demo.gif)
+
 ---
 
 ## Features
