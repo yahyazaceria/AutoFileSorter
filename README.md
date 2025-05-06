@@ -31,7 +31,7 @@ The script scans your source folder (e.g., Downloads), checks each file’s type
    Make sure you have [Python 3.x](https://www.python.org/downloads/) installed.
 
 2. **Download the Script**  
-   Download or copy the `filesort.py` script to your computer.
+   Fork or clone the `AutoFileSorter` repository to your computer.
 
 3. **Edit Paths**  
    Open `filesort.py` and set the variables at the top to match your system:
@@ -55,51 +55,32 @@ Add or remove file extensions in the `file_types` dictionary as needed.
 
 ---
 
-## Automate (Optional)
+## Automate (Mac/Linux) 
 
-You can automate AutoFileSorter to run at regular intervals on **Mac** and **Linux** using `crontab`, a built-in task scheduler.
+1. Open your crontab in nano:
+   env EDITOR=nano crontab -e
 
-### How to Automate with Crontab (Mac & Linux)
+2. Add this line at the end to run AutoFileSorter every 10 minutes:
+   `*/10 * * * * /usr/bin/python3 /Users/yourusername/path/to/filesort.py`
 
-1. **Find Your Python Path**  
-Open Terminal and run:
-which python3
+   Replace `/usr/bin/python3` with the output of `which python3`, and `/Users/yourusername/path/to/filesort.py` with the full path to your script.
+   - To run it every hour, use:
+     `0 * * * * /usr/bin/python3 /Users/yourusername/path/to/filesort.py`
+   - To run it every day at 7:30am, use:
+     `30 7 * * * /usr/bin/python3 /Users/yourusername/path/to/filesort.py`
 
-Copy the output (e.g., `/usr/bin/python3`).
+3. Save and exit nano:
+   - Press Ctrl+O, then Enter to save.
+   - Press Ctrl+X to exit.
 
-2. **Get the Full Path to Your Script**  
-For example: `/Users/yourusername/path/to/filesort.py` or `/home/yourusername/path/to/filesort.py`
+4. To list your current cron jobs:
+   crontab -l
 
-3. **Edit Your Crontab**  
-In Terminal, type:
-`crontab -e`
+5. To remove all your cron jobs:
+   crontab -r
 
-If prompted, choose an editor (nano is easiest).
 
-4. **Add a Cron Job**  
-At the end of the file, add a line like this:
-`*/10 * * * * /usr/bin/python3 /Users/yourusername/path/to/filesort.py`
-- This example runs the script every 10 minutes.  
-- To run it every hour: `0 * * * * ...`  
-- To run it every day at 7:30am: `30 7 * * * ...`
-- Adjust the schedule as you wish. [Use crontab.guru to build your schedule!](https://crontab.guru/)
-
-5. **Save and Exit**  
-- In nano: press `Ctrl+O` to save, then `Ctrl+X` to exit.
-- In vim: press `Esc`, then type `:wq` and press Enter.
-
-6. **Check Your Cron Jobs**  
-To list your current scheduled jobs, run:
-`crontab -l`
-
-**That’s it! Your script will now run automatically at the interval you set.**
-
-**Tips:**
-- Make sure your script is executable:  
-`chmod +x /Users/yourusername/path/to/filesort.py`
-
-- If you use a virtual environment, specify the full path to the Python interpreter inside that environment.
-- You can check that your script runs correctly by running it manually first.
+_Use Task Scheduler to automate on Windows_
 
 ---
 
